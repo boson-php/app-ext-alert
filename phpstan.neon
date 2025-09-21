@@ -1,0 +1,14 @@
+parameters:
+  level: max
+  scanFiles:
+    - resources/stubs/ffi.stub.php
+  excludePaths:
+    - src/Driver/Windows/User32.php
+    - src/Driver/MacOS/LibObjectC.php
+  strictRules:
+    allRules: true
+  fileExtensions:
+    - php
+  paths:
+    - src
+  tmpDir: vendor/.cache.phpstan
