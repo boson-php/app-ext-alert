@@ -4,14 +4,14 @@ declare(strict_types=1);
 
 namespace Boson\Api\Alert\Driver;
 
+use Boson\Api\Alert\AlertApiInterface;
 use Boson\Api\Alert\AlertButton;
 use Boson\Api\Alert\AlertCreateInfo;
-use Boson\Api\Alert\AlertExtensionInterface;
 use Boson\Api\Alert\AlertIcon;
 use Boson\Api\Alert\Driver\Windows\User32;
 use FFI\CData;
 
-final readonly class WindowsAlertExtension implements AlertExtensionInterface
+final readonly class WindowsAlertDriver implements AlertApiInterface
 {
     public function __construct(
         private User32 $user32 = new User32(),
